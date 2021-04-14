@@ -116,6 +116,11 @@ function Hexagon(props) {
     <polygon
       {...props.hexProps}
       onClick={props.onClick}
+      onMouseDown={props.onMouseDown}
+      onMouseUp={props.onMouseUp}
+      onMouseLeave={props.onMouseLeave}
+      onTouchStart={props.onTouchStart}
+      onTouchEnd={props.onTouchEnd}
       style={polyStyle}
       points={points.map(point => point.join(',')).join(' ')}
     />
@@ -151,6 +156,11 @@ Hexagon.propTypes = {
   diagonal: number,
   className: string,
   onClick: func,
+  onMouseDown: func,
+  onMouseUp: func,
+  onMouseLeave: func,
+  onTouchStart: func,
+  onTouchEnd: func,
   href: string,
   target: string,
   flatTop: bool,
